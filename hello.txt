@@ -1,1 +1,20 @@
 hello world!
+
+
+一、建立本地仓库
+1.初始化
+	git init   
+2.添加到本地仓库
+	git add  xxx.xx 
+	git add  *  所有
+3.输入本次的提交说明，准备提交暂存区中的更改的已跟踪文件，单引号内为说明内容
+	git commit -m "提交说明" 
+二、关联github仓库
+	//新建一个repository时会出现下面的代码，直接复制即可
+    git remote add origin https://github.com/CongliYin/CSS.git
+	如果出现错误：fatal: remote origin already exists，则执行以下语句：
+	git remote rm origin
+	git remote add origin https://github.com/CongliYin/CSS.git
+	如果出现错误failed to push som refs to…….，则执行以下语句，先把远程服务器github上面的文件拉先来，再push 上去。：
+	git pull origin master  拉取
+	git push origin master  上传
